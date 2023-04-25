@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+#productDetail{
+    margin-top: 120px;
+    font-family: 'Montserrat', sans-serif;
+    .mainImage{
+        img{
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    }
+}
