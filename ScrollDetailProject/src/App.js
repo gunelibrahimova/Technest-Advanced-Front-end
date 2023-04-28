@@ -3,9 +3,7 @@ import MyRouter from './Router/MyRouter';
 
 function App() {
   return (
-    <div>
-      <MyRouter/>
-    </div>
+    <MyRouter/>
   );
 }
 

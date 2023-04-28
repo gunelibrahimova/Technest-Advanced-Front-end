@@ -37,11 +37,9 @@ const ProductDetail = () => {
                         <p>stock quantity : {detail.stock}</p>
                         <p>Product Rating : {detail.rating}</p>
                         <h5>Price : {detail.price} $</h5>
-
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
