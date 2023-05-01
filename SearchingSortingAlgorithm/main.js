@@ -7,7 +7,7 @@ function linearSearch(arr, number) {
     return -1;
 }
 
-linearSearch([2, 4, 1, 7, 9, 5], 0)
+linearSearch([2, 4, 1, 7, 9, 5], 2); 
 
 //--------------------------
 
@@ -28,7 +28,7 @@ function binarySearch(arr, number) {
     return arr[mid] !== number ? -1 : mid;
 }
 
-binarySearch([0, 1, 2, 3, 4, 5, 7, 8, 9], 1);
+ console.log(binarySearch([0, 1, 2, 3, 4, 5, 7, 8, 9], 1)); 
 
 //---------------------------------
 
