@@ -226,9 +226,9 @@ function add(num) {
 
 const addFive = add(5);
 
-console.log(addFive());
-console.log(addFive());
-console.log(addFive());
+// console.log(addFive());
+// console.log(addFive());
+// console.log(addFive());
 
 
 //------------------------------------
@@ -244,7 +244,7 @@ Rectangle.prototype.getArea = function () {
 }
 
 const rectangle = new Rectangle(4, 5);
-console.log(rectangle.getArea());
+// console.log(rectangle.getArea());
 
 //---------------------------------
 
@@ -260,7 +260,7 @@ People.prototype.introducing = function () {
 
 const people = new People("Gunel", "21")
 
-console.log(people.introducing());
+// console.log(people.introducing());
 
 //-------------------------------
 
@@ -274,7 +274,7 @@ Animal.prototype.eat = function () {
 
 const animal = new Animal("Ayı")
 
-console.log(animal.eat());
+// console.log(animal.eat());
 
 
 //--------------------------
@@ -287,4 +287,72 @@ Array.prototype.last = function () {
    return this[this.length - 1]
 }
 
-console.log([].last());
+// console.log([].last());
+
+
+//-----------------------------------------
+
+
+//05.10.23
+
+// var countPoints = function(rings) {
+//   let ring = rings.split("")
+
+//   for (let i = 1; i < ring.length; i++) {  
+//     if(ring[i] >= 0 && ring[i] <= 9){
+//       for (let j = 0; j < ring.length; j++) {
+//         if(ring[j] == "R" && ring[j] == "G" && ring[j] == "B"){
+//           return "salam"
+//         }
+//       }
+//     }
+//   }
+// };
+
+// console.log(countPoints("B0R0G0R9R0B0G0"));
+
+
+const countPoints = function(rings) {
+  let rods = new Array(10).fill(0);
+  let count = 0;
+
+  for (let i = 0; i < rings.length; i += 2) {
+    let color = rings[i];
+    let rod = parseInt(rings[i + 1]);
+
+    if (rods[rod] === 0) {
+      rods[rod] = 1;
+    } else if (rods[rod] === 1 && (color === 'R' || color === 'G' || color === 'B')) {
+      rods[rod] = 2;
+      count++;
+    }
+  }
+
+  return count;
+};
+
+console.log(countPoints("B0R0G0R9R0B0G0")); 
+
+//-----------------------------------
+
+const sumOddLengthSubarrays = function(arr) {
+  let sum = 0;
+
+  for (let start = 0; start < arr.length; start++) {
+    for (let end = start; end < arr.length; end += 2) {
+      for (let i = start; i <= end; i++) {
+        sum += arr[i];
+      }
+    }
+  }
+
+  return sum;
+};
+
+console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3])); 
+
+
+
+
+
+
